@@ -54,9 +54,9 @@ const UserNavbar = () => {
                 location.pathname === "/user/courses" ? "text-orange-400" : ""
               }`}
             >
-              ALL COURSES
+              ALL RESOURCES
             </span>
-            <span
+            {/* <span
               onClick={() => navigate("/user/myLearning")}
               className={`cursor-pointer hover:text-orange-400 transition-all duration-300 ${
                 location.pathname === "/user/myLearning"
@@ -65,7 +65,7 @@ const UserNavbar = () => {
               }`}
             >
               MY LEARNING
-            </span>
+            </span> */}
             <span
               className={`cursor-pointer hover:text-orange-400 transition-all duration-300 ${
                 location.pathname === "/user/blog" ? "text-orange-400" : ""
@@ -74,13 +74,21 @@ const UserNavbar = () => {
             >
               BLOG
             </span>
-            <span
+            {/* <span
               className={`cursor-pointer hover:text-orange-400 transition-all duration-300 ${
                 location.pathname === "/user/chat" ? "text-orange-400" : ""
               }`}
               onClick={() => navigate("/user/chat")}
             >
               CHATS
+            </span> */}
+            <span
+              className={`cursor-pointer hover:text-orange-400 transition-all duration-300 ${
+                location.pathname === "/user/profile" ? "text-orange-400" : ""
+              }`}
+              onClick={() => navigate("/user/profile")}
+            >
+              V-LABS
             </span>
             <span
               className={`cursor-pointer hover:text-orange-400 transition-all duration-300 ${

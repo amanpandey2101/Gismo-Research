@@ -128,8 +128,8 @@ const UserHome = () => {
             What We Offer?
           </span>
         </div>
-        <div className="container mx-auto p-3 border-b-2 border-gray-200 mb-12" data-aos="fade-up">
-          <div className="flex flex-col-reverse sm:flex-row  bg-blue-200 lg:text-2xl shadow-md shadow-gray-500 items-center ">
+        <div className="container mx-auto p-3 border-b-2 border-gray-200 mb-4" data-aos="fade-up">
+          <div className="flex flex-col-reverse sm:flex-row  bg-blue-200 lg:text-xl shadow-md shadow-gray-500 items-center ">
             <ul className="list-[square] p-10 space-y-2 ">
               <li className="text-red-600  font-semibold cursor-pointer hover:scale-[1.01]">
                 Provide Pre-assembled experimental setup boxes / animated
@@ -156,7 +156,7 @@ const UserHome = () => {
               </li >
               <li className=" text-pink-500 font-semibold cursor-pointer hover:scale-[1.01]">Digital Library and e-resources</li>
             </ul>
-            <img src={OfferImage} className="w-96 md:h-[76vh]"/>
+            <img src={OfferImage} className="w-96 md:h-[65vh]"/>
           </div>
         </div>
         <div className="p-3 ">
