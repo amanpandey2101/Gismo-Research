@@ -52,17 +52,17 @@ const UserHome = () => {
       <div className="bg-gray-100 h-auto">
         <div className="mx-auto p-2 border-b-4 border-gray-200 flex  bg-blue-200 justify-center  ">
           <div className="flex flex-col sm:flex-row   ">
-            <div className="w-full sm:w-full flex flex-col">
-              <div className="font-bold   text-lg lg:text-5xl p-5 text-blue-800 relative mt-20">
+            <div className="w-full sm:w-full flex flex-col ">
+              <div className="font-bold   text-2xl lg:text-5xl p-5 text-blue-800 relative md:mt-20 max-[768px]:text-center">
                 UNLOCK THE WORLD OF{" "}
-                <span className="relative top-5"> KNOWLEDGE WITH GISMO</span>
+                <span className="relative md:top-5"> KNOWLEDGE WITH GISMO</span>
               </div>
-              <span className="font-semibold lg:w-2/3 w-full text-lg lg:text-2xl p-5">
+              <span className="font-semibold lg:w-2/3 w-full text-lg lg:text-2xl p-5  max-[768px]:text-center">
                 START YOUR FAVOURITE COURSE BUILD YOUR BRIGHT CAREER
               </span>
-              <div className="lg:mx-2">
+              <div className="relative lg:mx-2 flex  max-[768px]:justify-center" >
                 <button
-                  className="bg-teal-600 w-40 m-3 p-3 hover:bg-teal-700 text-lg rounded-lg text-white"
+                  className="bg-teal-600 w-40 m-3 p-3 hover:bg-teal-700 hover:scale-[1.05] text-lg rounded-lg text-white  "
                   onClick={() => navigate("/user/courses")}
                 >
                   Explore Category
