@@ -140,7 +140,7 @@ const SignIn = () => {
       <div className="flex flex-col items-center px-3 pb-5 lg:pt-5">
         <div className="flex flex-col items-center p-2">
           <h1 className="font-semibold text-2xl sm:text-xl md:text-lg lg:text-2xl p-5 sm:px-6 md:px-8 lg:px-5">
-            Log in to your SkillSail Account
+            Log in to your Gismo Account
           </h1>
           <form onSubmit={handleSubmit}>
             <div className="flex flex-col p-3 w-96 max-w-md lg:pt-5">
