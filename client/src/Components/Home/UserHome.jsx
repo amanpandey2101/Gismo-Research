@@ -11,6 +11,8 @@ import VLabsImage from "../../assets/virtual-labs.png";
 import SuccessImage from "../../assets/success.jpg";
 import LabsImage from "../../assets/labs-removebg.png";
 import OfferImage from "../../assets/offer.jpg"
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const UserHome = () => {
   const { role } = useSelector((state) => state.user);
@@ -19,6 +21,13 @@ const UserHome = () => {
 
   useEffect(() => {
     fetchBlogData();
+    AOS.init({
+      offset: 100,
+      duration: 500,
+      easing: 'ease-in-out-sine',
+      delay: 50,
+    });
+    AOS.refresh();
   }, []);
 
   const fetchBlogData = async () => {
@@ -52,12 +61,12 @@ const UserHome = () => {
       <div className="bg-gray-100 h-auto">
         <div className="mx-auto p-2 border-b-4 border-gray-200 flex  bg-blue-200 justify-center  ">
           <div className="flex flex-col sm:flex-row   ">
-            <div className="w-full sm:w-full flex flex-col ">
-              <div className="font-bold   text-2xl lg:text-5xl p-5 text-blue-800 relative md:mt-20 max-[768px]:text-center">
+            <div className="w-full sm:w-full flex flex-col " data-aos="fade-zoom-in">
+              <div className="font-bold   text-2xl lg:text-5xl p-5 text-blue-800 relative md:mt-20 max-[768px]:text-center" >
                 UNLOCK THE WORLD OF{" "}
                 <span className="relative md:top-5"> KNOWLEDGE WITH GISMO</span>
               </div>
-              <span className="font-semibold lg:w-2/3 w-full text-lg lg:text-2xl p-5  max-[768px]:text-center">
+              <span className="font-semibold lg:w-2/3 w-full text-lg lg:text-2xl p-5  max-[768px]:text-center" data-aos="fade-left">
                 START YOUR FAVOURITE COURSE BUILD YOUR BRIGHT CAREER
               </span>
               <div className="relative lg:mx-2 flex  max-[768px]:justify-center" >
@@ -69,34 +78,34 @@ const UserHome = () => {
                 </button>
               </div>
             </div>
-            <div className="w-full sm:w-full p-2 h-fit flex flex-col items-center">
+            <div className="w-full sm:w-full p-2 h-fit flex flex-col items-center"  data-aos="zoom-in">
               <img src={LabsImage} className=" lg:ml-auto" />
             </div>
           </div>
         </div>
         <div className="flex items-center justify-center p-3 mx-auto">
-          <span className="font-bold lg:text-5xl sm:text-xl text-blue-800">
+          <span className="font-bold lg:text-5xl sm:text-xl text-blue-800" data-aos="fade-in" >
             CHOOSE YOUR CATEGORY
           </span>
         </div>
 
         <div className="container mx-auto p-3 border-b-2 border-gray-200 mb-20">
           <div className="flex flex-col sm:flex-row justify-center">
-            <div className="w-full sm:w-1/4 h-72 p-3 hover:-translate-y-3 transition-all duration-300 cursor-pointer">
+            <div className="w-full sm:w-1/4 h-72 p-3 hover:-translate-y-3 transition-all duration-300 cursor-pointer" data-aos="zoom-in-up">
               <DetailsHome
                 name="Online Mode"
                 color="bg-orange-300"
                 image={OnlineModeImage}
               />
             </div>
-            <div className="w-full sm:w-1/4 h-72 p-3 hover:-translate-y-3 transition-all duration-300 cursor-pointer">
+            <div className="w-full sm:w-1/4 h-72 p-3 hover:-translate-y-3 transition-all duration-300 cursor-pointer" data-aos="zoom-in-up">
               <DetailsHome
                 name="Physical Mode"
                 color="bg-red-300"
                 image={OfflineModeImage}
               />
             </div>
-            <div className="w-full sm:w-1/4 h-72 p-3 hover:-translate-y-3 transition-all duration-300 cursor-pointer">
+            <div className="w-full sm:w-1/4 h-72 p-3 hover:-translate-y-3 transition-all duration-300 cursor-pointer" data-aos="zoom-in-up">
               <DetailsHome
                 name="Intellectual Property Solutions (IPS)"
                 color="bg-violet-200"
@@ -104,7 +113,7 @@ const UserHome = () => {
               />
             </div>
 
-            <div className="w-full sm:w-1/4 h-72 p-3 hover:-translate-y-3 transition-all duration-300 cursor-pointer">
+            <div className="w-full sm:w-1/4 h-72 p-3 hover:-translate-y-3 transition-all duration-300 cursor-pointer" data-aos="zoom-in-up">
               <DetailsHome
                 name="Virtual Labs"
                 color="bg-blue-200"
@@ -115,11 +124,11 @@ const UserHome = () => {
         </div>
 
         <div className="flex items-center justify-center p-3 mx-auto">
-          <span className="font-bold text-3xl lg:text-5xl  text-blue-800">
+          <span className="font-bold text-3xl lg:text-5xl  text-blue-800" data-aos="zoom-out-down">
             What We Offer?
           </span>
         </div>
-        <div className="container mx-auto p-3 border-b-2 border-gray-200 mb-20">
+        <div className="container mx-auto p-3 border-b-2 border-gray-200 mb-12" data-aos="fade-up">
           <div className="flex flex-col-reverse sm:flex-row  bg-blue-200 lg:text-2xl shadow-md shadow-gray-500 items-center ">
             <ul className="list-[square] p-10 space-y-2 ">
               <li className="text-red-600  font-semibold cursor-pointer hover:scale-[1.01]">
@@ -151,21 +160,18 @@ const UserHome = () => {
           </div>
         </div>
         <div className="p-3 ">
-          <div className="w-full lg:h-80 h-full p-2 bg-green-200 flex flex-col sm:flex-row items-center justify-between shadow-md shadow-gray-500">
+          <div className="w-full lg:h-80 h-full p-2 bg-green-200 flex flex-col sm:flex-row items-center justify-between shadow-md shadow-gray-500" data-aos="zoom-in">
             <div className="w-full sm:w-1/2 flex flex-col items-center ">
               <span className="text-3xl p-3 font-semibold text-blue-700">
-                PLATFORM TO CONNECT AND BUILD YOUR CAREER
+                PLATFORM TO LEARN AND BUILD YOUR CAREER
               </span>
-              <span className="text-xl p-3 text-justify">
-                &quot;OUR PLATFORM FACILITATES DIRECT COMMUNICATION BETWEEN
-                USERS AND TUTORS. COLLABORATE, CONNECT, AND SHOWCASE YOUR
-                PROJECTS TO ENGAGE WITH STARTUPS AND TOP COMPANIES IN WEB
-                DEVELOPMENT AND AI.&quot;
+              <span className="text-lg p-3 text-justify md:ml-4">
+                &quot;Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dolor laudantium nostrum laboriosam natus. Quasi in ducimus modi nemo veniam sunt natus ad, illum cupiditate necessitatibus, enim illo neque debitis nihil totam, voluptates aspernatur.&quot;
               </span>
             </div>
 
             <img
-              className="w-full sm:w-[35vw] h-60 p-6"
+              className="w-full sm:w-[30vw] h-60 p-6"
               src="../../picture-home.png"
               alt=""
             />

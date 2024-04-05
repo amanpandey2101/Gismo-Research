@@ -2,10 +2,10 @@ import Logo from "../HelperComponents/Logo";
 import CompanyImage from "../../assets/company.png"
 const Footer = () => {
   return (
-    <div className="sm:max-w-xl md:max-w-full lg:p-6 border-t-2 border-gray-100">
+    <div className="sm:max-w-xl md:max-w-full lg:p-6 border-t-2 border-gray-100 mx-4">
       <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
         <div className="sm:col-span-2 pt-3 flex items-center">
-          <Logo /> <img src={CompanyImage} alt="" className="h-20 w-[30vw]"/>
+          <Logo /> <img src={CompanyImage} alt="" className="md:h-20 md:w-[30vw] h-12 w-60 "/>
           <div className="mt-6 lg:max-w-sm">
           
          

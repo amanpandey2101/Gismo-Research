@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 import LogoImage from '../../assets/Logo.png'
 const Logo = ({ className, onClick }) => {
   return (
-    <div className={`w-44  ${className}`} onClick={onClick}>
-      <img src={LogoImage} alt="logo" className="h-16 w-28"/>
+    <div className={`w-36  ${className}`} onClick={onClick}>
+      <img src={LogoImage} alt="logo" className="h-16 w-32"/>
     </div>
   );
 };
