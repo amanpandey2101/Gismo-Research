@@ -2,7 +2,7 @@ import Logo from "../HelperComponents/Logo";
 import CompanyImage from "../../assets/company.png"
 const Footer = () => {
   return (
-    <div className="sm:max-w-xl md:max-w-full lg:p-6 border-t-2 border-gray-100 mx-4">
+    <div className="sm:max-w-xl md:max-w-full lg:p-6 border-t-2 border-gray-300 mx-4">
       <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
         <div className="sm:col-span-2 pt-3 flex items-center">
           <Logo /> <img src={CompanyImage} alt="" className="md:h-20 md:w-[30vw] h-12 w-60 "/>
@@ -34,7 +34,7 @@ const Footer = () => {
               title="Our email"
               className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
             >
-              info@lorem.mail
+              gismo.research.pvt.ltd@gmail.com
             </a>
           </div>
           <div className="flex">
@@ -88,11 +88,11 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
-        <p className="text-sm text-gray-600">
+      <div className="flex flex-col-reverse justify-between pt-5 border-t-2 border-gray-300 lg:flex-row">
+        <p className="text-sm text-gray-600 font-bold">
           © Copyright 2020 Lorem Inc. All rights reserved.
         </p>
-        <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
+        <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row font-semibold">
           <li>
             <a
               href="/"

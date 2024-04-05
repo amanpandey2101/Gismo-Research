@@ -186,7 +186,7 @@ const SignIn = () => {
             </div>
             <div className="px-2 lg:pt-5 flex justify-between">
               <h1 className="font-semibold">
-                New to SkillSail ?{" "}
+                New to Gismo ?{" "}
                 <span
                   className="text-orange-400 font-bold cursor-pointer"
                   onClick={() => navigate("/user/signup")}

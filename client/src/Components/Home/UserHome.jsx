@@ -69,7 +69,7 @@ const UserHome = () => {
               <span className="font-semibold lg:w-2/3 w-full text-lg lg:text-2xl p-5  max-[768px]:text-center" data-aos="fade-left">
                 START YOUR FAVOURITE COURSE BUILD YOUR BRIGHT CAREER
               </span>
-              <div className="relative lg:mx-2 flex  max-[768px]:justify-center" >
+              <div className="relative lg:mx-2 flex md:justify-start justify-center" >
                 <button
                   className="bg-teal-600 w-40 m-3 p-3 hover:bg-teal-700 hover:scale-[1.05] text-lg rounded-lg text-white  "
                   onClick={() => navigate("/user/courses")}
@@ -84,36 +84,36 @@ const UserHome = () => {
           </div>
         </div>
         <div className="flex items-center justify-center p-3 mx-auto">
-          <span className="font-bold lg:text-5xl sm:text-xl text-blue-800" data-aos="fade-in" >
+          <span className="font-bold lg:text-5xl text-2xl text-blue-800" data-aos="fade-in" >
             CHOOSE YOUR CATEGORY
           </span>
         </div>
 
-        <div className="container mx-auto p-3 border-b-2 border-gray-200 mb-20">
-          <div className="flex flex-col sm:flex-row justify-center">
-            <div className="w-full sm:w-1/4 h-72 p-3 hover:-translate-y-3 transition-all duration-300 cursor-pointer" data-aos="zoom-in-up">
+        <div className="container mx-auto p-3 border-b-2 border-gray-200 mb-8">
+          <div className="flex flex-col sm:flex-row justify-center "  data-aos="zoom-in-up">
+            <div className="w-full sm:w-1/4 h-full p-3 hover:scale-[1.1] transition-all duration-300 cursor-pointer" >
               <DetailsHome
                 name="Online Mode"
                 color="bg-orange-300"
                 image={OnlineModeImage}
               />
             </div>
-            <div className="w-full sm:w-1/4 h-72 p-3 hover:-translate-y-3 transition-all duration-300 cursor-pointer" data-aos="zoom-in-up">
+            <div className="w-full sm:w-1/4 h-72 p-3 hover:-translate-y-3 transition-all duration-300 cursor-pointer" >
               <DetailsHome
                 name="Physical Mode"
                 color="bg-red-300"
                 image={OfflineModeImage}
               />
             </div>
-            <div className="w-full sm:w-1/4 h-72 p-3 hover:-translate-y-3 transition-all duration-300 cursor-pointer" data-aos="zoom-in-up">
+            <div className="w-full sm:w-1/4 h-72 p-3 hover:scale-[1.1] transition-all duration-300 cursor-pointer" >
               <DetailsHome
-                name="Intellectual Property Solutions (IPS)"
+                name="Intellectual Property Solutions"
                 color="bg-violet-200"
                 image={IPSImage}
               />
             </div>
 
-            <div className="w-full sm:w-1/4 h-72 p-3 hover:-translate-y-3 transition-all duration-300 cursor-pointer" data-aos="zoom-in-up">
+            <div className="w-full sm:w-1/4 h-72 p-3 hover:-translate-y-3 transition-all duration-300 cursor-pointer" >
               <DetailsHome
                 name="Virtual Labs"
                 color="bg-blue-200"
