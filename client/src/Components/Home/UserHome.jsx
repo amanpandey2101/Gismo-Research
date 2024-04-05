@@ -90,7 +90,7 @@ const UserHome = () => {
         </div>
 
         <div className="container mx-auto p-3 border-b-2 border-gray-200 mb-8">
-          <div className="flex flex-col sm:flex-row justify-center "  data-aos="zoom-in-up">
+          <div className="flex flex-col sm:flex-row justify-center space-y-3 "  data-aos="zoom-in-up">
             <div className="w-full sm:w-1/4 h-full p-3 hover:scale-[1.1] transition-all duration-300 cursor-pointer" >
               <DetailsHome
                 name="Online Mode"
@@ -98,14 +98,14 @@ const UserHome = () => {
                 image={OnlineModeImage}
               />
             </div>
-            <div className="w-full sm:w-1/4 h-72 p-3 hover:-translate-y-3 transition-all duration-300 cursor-pointer" >
+            <div className="w-full sm:w-1/4 h-full p-3 hover:-translate-y-3 transition-all duration-300 cursor-pointer" >
               <DetailsHome
                 name="Physical Mode"
                 color="bg-red-300"
                 image={OfflineModeImage}
               />
             </div>
-            <div className="w-full sm:w-1/4 h-72 p-3 hover:scale-[1.1] transition-all duration-300 cursor-pointer" >
+            <div className="w-full sm:w-1/4 h-full p-3 hover:scale-[1.1] transition-all duration-300 cursor-pointer" >
               <DetailsHome
                 name="Intellectual Property Solutions"
                 color="bg-violet-200"
@@ -113,7 +113,7 @@ const UserHome = () => {
               />
             </div>
 
-            <div className="w-full sm:w-1/4 h-72 p-3 hover:-translate-y-3 transition-all duration-300 cursor-pointer" >
+            <div className="w-full sm:w-1/4 h-full p-3 hover:-translate-y-3 transition-all duration-300 cursor-pointer" >
               <DetailsHome
                 name="Virtual Labs"
                 color="bg-blue-200"
