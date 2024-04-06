@@ -34,7 +34,7 @@ const UserNavbar = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-20 mx-auto flex w-full items-center justify-between bg-white border-b border-gray-200 p-5">
+      <header className="sticky top-0 z-20 mx-auto flex w-full items-center justify-between bg-white border-b border-gray-200 p-3">
         <div className="cursor-pointer" onClick={() => navigate("/")}>
         <Logo/>
         </div>
@@ -144,13 +144,13 @@ const UserNavbar = () => {
         </div>
       </header>
       {!toggle && (
-        <div className="absolute w-full z-10">
+        <div className="fixed w-full z-10 ">
           <ul className="p-3 font-semibold flex flex-col items-end bg-white bg-opacity-95 text-black">
             <li className="p-3" onClick={() => navigate("/")}>
               HOME
             </li>
             <li className="p-3" onClick={() => navigate("/user/courses")}>
-              ALL COURSES
+              ALL RESOURCES
             </li>
             <li className="p-3" onClick={() => navigate("/user/myLearning")}>
               MY LEARNING

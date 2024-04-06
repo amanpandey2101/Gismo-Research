@@ -3,7 +3,7 @@ import LogoImage from '../../assets/Logo.png'
 const Logo = ({ className, onClick }) => {
   return (
     <div className={`w-36  ${className}`} onClick={onClick}>
-      <img src={LogoImage} alt="logo" className="h-16 w-32"/>
+      <img src={LogoImage} alt="logo" className="md:h-16 md:w-32 h-12"/>
     </div>
   );
 };
