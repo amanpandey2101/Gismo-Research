@@ -5,6 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 import "react-toastify/dist/ReactToastify.css";
 import { IoIosEyeOff } from "react-icons/io";
 import { IoIosEye } from "react-icons/io";
+import { post } from "../../Helpers/api_helper";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -135,7 +136,7 @@ const SignUp = () => {
     if (viewPassword === true) {
       passwordView();
     }
-    await AxiosInstance.post("/signup", userData)
+    await post("/signup", userData)
       .then((response) => {
         if (response) {
           toast.remove(toastId);

@@ -9,8 +9,8 @@ const verifyEmail = async (body) => {
       port: 465,
       secure: true,
       auth: {
-        user: process.env.AU_EMAIL,
-        pass: process.env.AU_PASS,
+        user: process.env.EMAIL,
+        pass: process.env.PASS,
       },
       tls: {
         rejectUnauthorized: false,
@@ -20,9 +20,9 @@ const verifyEmail = async (body) => {
     // const OTP = Math.floor(Math.random()*10000)
 
     const mailOptions = {
-      from: process.env.AU_EMAIL,
+      from: process.env.EMAIL,
       to: body.email,
-      subject: "Welcome to SkillSail",
+      subject: "Welcome to Gismo Research",
       html: `<p>Hello <strong>${body.name}</strong>, The otp is <strong>${body.OTP}</strong>. If this is not done by you, you can safely ignore this email.Happy Learning!!!`,
     };
 
@@ -41,8 +41,8 @@ const sendMail = async (option) => {
       port: 465,
       secure: true,
       auth: {
-        user: process.env.AU_EMAIL,
-        pass: process.env.AU_PASS,
+        user: process.env.EMAIL,
+        pass: process.env.PASS,
       },
       tls: {
         rejectUnauthorized: false,
@@ -61,8 +61,8 @@ const mailSender = async (body) => {
       port: 465,
       secure: true,
       auth: {
-        user: process.env.AU_EMAIL,
-        pass: process.env.AU_PASS,
+        user: process.env.EMAIL,
+        pass: process.env.PASS,
       },
       tls: {
         rejectUnauthorized: false,
@@ -70,7 +70,7 @@ const mailSender = async (body) => {
     });
 
     const mailOptions = {
-      from: '"Remainder Hub" <process.env.AU_EMAIL>',
+      from: '"Remainder Hub" <process.env.EMAIL>',
       to: body.email,
       subject: `!!! Remainder for ${body.email} `,
       html: `${body.message}`,

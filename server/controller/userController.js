@@ -26,7 +26,7 @@ const signUp = async (req, res, next) => {
     let file;
     if (verifyDocument) {
       file = await cloudinary.uploader.upload(verifyDocument, {
-        folder: "SkillSail",
+        folder: "Gismo",
       });
     }
     const saltRounds = 10;

@@ -19,7 +19,7 @@ export async function paymentOrder(req, res, next) {
       currency: "INR",
     };
     instance.orders.create(options, function (err, order) {
-      if (err) {
+      if (err) { 
         console.log(err);
         res.json({ err: true, message: "server error" });
       } else {

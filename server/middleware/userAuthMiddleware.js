@@ -39,7 +39,7 @@ const verifyAccess = async (req, res, next) => {
       name: existingUser.name,
       email,
       OTP,
-    };
+    }; 
     // console.log("otp: ", OTP);
     await otpdetails.save();
     const verify = await verifyEmail(emailRecipients);

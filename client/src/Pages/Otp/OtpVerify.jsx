@@ -2,25 +2,29 @@ import Footer from "../../Components/Navbar/Footer";
 import UserNavbar from "../../Components/Navbar/UserNavbar";
 import { useLocation, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
-import { useState } from "react";
-import AxiosInstance from "../../Axios/AxiosInstance";
+import { useState, useRef } from "react";
 import Swal from "sweetalert2";
-
+import Axios from "../../Axios/AxiosInstance";
 const OtpVerify = () => {
   const [otpValues, setOtpValues] = useState(["", "", "", ""]);
   const location = useLocation();
   const navigate = useNavigate();
   const data = location.state;
+  const inputRefs = useRef([])
 
   const handleOtpChange = (index, value) => {
     const newOtpValues = [...otpValues];
     newOtpValues[index] = value;
     setOtpValues(newOtpValues);
+    if(value !== "" && index < otpValues.length-1){
+      inputRefs.current[index+1].focus();
+    }
   };
+
 
   const handleVerifyAccount = async () => {
     try {
-      const res = await AxiosInstance.post("/verifyOtp", {
+      const res = await Axios.post("/verifyOtp", {
         data,
         otpValues,
       });
@@ -81,11 +85,13 @@ const OtpVerify = () => {
                     {otpValues.map((value, index) => (
                       <div key={index} className="w-16 h-16 ">
                         <input
-                          className="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-200 text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-blue-700"
-                          type="text"
+                          className="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-400 text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-blue-700"
+                          type="text" 
                           name=""
                           id=""
+                          placeholder="X"
                           maxLength="1"
+                          ref={(el)=>{inputRefs.current[index] = el}}
                           value={value}
                           onChange={(e) =>
                             handleOtpChange(index, e.target.value)
